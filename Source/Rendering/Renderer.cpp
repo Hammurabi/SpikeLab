@@ -18,7 +18,8 @@ void FRenderer::show(FNervousSystem& nervousSystem)
 	if (!glfwInit())
 	{
 		std::cout << "Unable to initialize GLFW.\n";
-		exit(0);
+		nervousSystem.shutdown();
+		return;
 	}
 
 	auto Primary = glfwGetPrimaryMonitor();
@@ -42,7 +43,7 @@ void FRenderer::show(FNervousSystem& nervousSystem)
 
 	glfwWindowHint(GLFW_DECORATED, GLFW_TRUE);
 
-	mWindow = glfwCreateWindow(WindowX, WindowY, "SpikerLab", NULL, NULL);
+	mWindow = glfwCreateWindow(WindowX, WindowY, "SpikeLab", NULL, NULL);
 
 	int MonitorX, MonitorY;
 	glfwGetMonitorPos(Monitor, &MonitorX, &MonitorY);
@@ -56,6 +57,8 @@ void FRenderer::show(FNervousSystem& nervousSystem)
 	{
 		glfwTerminate();
 		std::cout << "could not create a GLFW window with the provided parameters." << std::endl;
+		nervousSystem.shutdown();
+		return;
 	}
 
 	glfwSetWindowSizeCallback(mWindow, [](GLFWwindow* window, int Width, int Height) {
@@ -73,6 +76,8 @@ void FRenderer::show(FNervousSystem& nervousSystem)
 
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
 		std::cout << ("opengl context could not be initiated.") << std::endl;
+		nervousSystem.shutdown();
+		return;
 	}
 
 	GLuint vao;
