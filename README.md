@@ -27,7 +27,7 @@ With SpikeLab you can simulate neural-excitation/inhibition and generate action 
 
 You can also create chain neurons together to create timed circuits that repeat specific inputs!
 ### The Sky's The Limit!
-Complex circuits can  be created with SpikeLab that can give rise to new patterns and unexpected behavior, so have it at it!
+Complex circuits can  be created with SpikeLab that can give rise to new patterns and unexpected behavior, so have at it!
 
 ## I Want To Learn To Make My Own Simulation
 So you want to create your own simulator? That's great! Scroll down to the "References" tab for the resources I used to create this project.
