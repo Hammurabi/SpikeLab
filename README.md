@@ -25,7 +25,7 @@ With SpikeLab you can simulate neural-excitation/inhibition and generate action 
 ### Create Timed Neural-Circuits!
 ![enter image description here](https://raw.githubusercontent.com/Hammurabi/SpikeLab/master/gifs/timed%20circuits.gif)
 
-You can also create chain neurons together to create timed circuits that repeat specific inputs!
+You can also chain neurons together to create timed circuits that repeat specific inputs!
 ### The Sky's The Limit!
 Complex circuits can  be created with SpikeLab that can give rise to new patterns and unexpected behavior, so have at it!
 
